@@ -7,7 +7,7 @@ import { createTodoSchema } from "../validations/todo";
 
 export async function createTodo(data) {
   try {
-    const validateData = createTodoSchema(data);
+    const validateData = createTodoSchema.parse(data);
     await connectDB();
     const todo = await Todo.create(validateData);
     revalidatePath("/");

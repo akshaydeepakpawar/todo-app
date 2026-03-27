@@ -48,6 +48,7 @@ const TodoForm = () => {
       }
     } catch (error) {
       toast.error("Failed to create todo")
+      console.log(error);
     }
   }
   if(!isOpen){
