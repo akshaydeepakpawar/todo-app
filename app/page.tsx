@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TodoForm from "@/components/TodoForm"
-
+import TodoList from "@/components/TodoList"
+import TodoFilter from "@/components/TodoFilter"
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         </header>
         <main>
           <TodoForm/>
+          <TodoFilter/>
+          <TodoList/>
         </main>
       </div>
       <footer className="mt-12 text-center text-sm text-muted-foreground">
